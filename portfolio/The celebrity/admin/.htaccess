@@ -1,0 +1,12 @@
+RewriteEngine on
+
+RewriteRule ^users?$ users.php
+RewriteRule ^categories?$ categories.php
+RewriteRule ^posts?$ posts.php
+RewriteRule ^addPost?$ addPost.php
+RewriteRule ^addUser?$ addUser.php
+RewriteRule ^addCategory?$ addCategory.php
+RewriteRule ^login?$ login.php
+RewriteRule ^editPost/([0-9])?$ editPost.php?id=$1
+RewriteRule ^editUser?$ editUser.php
+RewriteRule ^delete$ delete.php

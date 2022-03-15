@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.max_width {
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 80px;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.navbar.sticky {
+    padding: 15px 0;
+    background-color: crimson;
+}
+
+.navbar .max_width {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo a {
+    color: #fff;
+    font-weight: 600;
+    font-size: 35px;
+}
+
+.navbar .logo a span {
+    color: crimson;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a span {
+    color: #fff;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    color: crimson;
+}
+
+.navbar.sticky .menu li a:hover {
+    color: black;
+}
+
+.scroll_up_btn {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    z-index: 9999;
+    right: 30px;
+    bottom: 10px;
+    background: crimson;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    font-weight: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll_up_btn.show {
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 30px;
+}
+
+
+
+.menu_btn {
+    font-size: 23px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.home {
+    display: flex;
+    background: url("images/banner.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    min-height: 500px;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home .max_width {
+    margin: auto 0 auto 40px;
+}
+
+.home .home_content .text1 {
+    font-size: 27px;
+}
+
+.home .home_content .text2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .home_content .text3 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.home .home_content .text3 span {
+    color: crimson;
+    font-weight: 500;
+}
+
+.home .home_content a {
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border: 2px solid crimson;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.home .home_content a:hover {
+    color: crimson;
+    background: none;
+}
+
+
+
+section {
+    padding: 100px 0;
+}
+
+.about,
+.services,
+.skills,
+.teams,
+.contact,
+footer {
+    font-family: 'Poppins', sans-serif;
+}
+
+section .title {
+    position: relative;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+
+section .title::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section .title::after {
+    position: absolute;
+    padding: 5px;
+    background: #fff;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: crimson;
+}
+
+.about .title::after {
+    content: "who i am";
+}
+
+.about .about_content,
+.services .services_content,
+.skills .skills_content,
+.contact .contact_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about .about_content .left {
+    width: 45%;
+}
+
+.about .about_content .left img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.about .about_content .right {
+    width: 55%;
+}
+
+.about .about_content .right .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about .about_content .right .text span {
+    color: crimson;
+}
+
+.about .about_content .right p {
+    text-align: justify;
+}
+
+.about .about_content .right a {
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border: 2px solid crimson;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+
+.about .about_content .right a:hover {
+    background: none;
+    color: crimson;
+}
+
+.services,
+.teams {
+    background: #111;
+    color: #fff;
+}
+
+.services .title::before,
+.teams .title::before {
+    background: #fff;
+}
+
+.services .title::after,
+.teams .title::after {
+    background: #111;
+    content: "what i provide";
+}
+
+.services .services_content .card {
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.services .services_content .card .box {
+    transition: all 0.3s ease;
+}
+
+.services .services_content .card:hover {
+    background-color: crimson;
+}
+
+
+.services .services_content .card:hover .box {
+    transform: scale(1.05);
+}
+
+.services .services_content .card i {
+    font-size: 50px;
+    color: crimson;
+    transition: color 0.3s ease;
+}
+
+.services .services_content .card:hover i {
+    color: #111;
+}
+
+.services .services_content .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+.skills .title::after {
+    content: "what i know";
+}
+
+.skills .skills_content .column {
+    width: calc(50% - 30px);
+}
+
+.skills .skills_content .left .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.skills .skills_content .left p {
+    text-align: justify;
+}
+
+.skills .skills_content .left a {
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border: 2px solid crimson;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.skills .skills_content .left a:hover {
+    background: none;
+    color: crimson;
+}
+
+.skills .skills_content .right .bars {
+    margin-bottom: 15px;
+}
+
+.skills .skills_content .right .info {
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .skills_content .right span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.skills .skills_content .right .line {
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+
+.skills .skills_content .right .line::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    background: crimson;
+}
+
+.skills .skills_content .right .html::before {
+    width: 90%;
+}
+
+.skills .skills_content .right .css::before {
+    width: 60%;
+}
+
+.skills .skills_content .right .js::before {
+    width: 80%;
+}
+
+.skills .skills_content .right .php::before {
+    width: 50%;
+}
+
+.skills .skills_content .right .mysql::before {
+    width: 70%;
+}
+
+
+.teams .title::after {
+    content: "who with me";
+}
+
+.teams .carousel .card {
+    background: #222;
+    padding: 25px 35px;
+    border-radius: 6px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.teams .carousel .card:hover {
+    background: crimson;
+}
+
+.teams .carousel .card .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.teams .carousel .card:hover .box {
+    transform: scale(1.05);
+}
+
+.teams .carousel .card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.teams .carousel .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+
+.teams .carousel .card:hover img {
+    border-color: #fff;
+}
+
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot {
+    width: 13px;
+    height: 13px;
+    outline: none !important;
+    margin: 0 5px;
+    border-radius: 50%;
+    border: 2px solid crimson !important;
+    transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+    width: 35px;
+    border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+    background: crimson !important;
+}
+
+.contact .title::after {
+    content: "get in touch";
+}
+
+.contact .contact_content .column {
+    width: calc(50% - 30px);
+}
+
+.contact .contact_content .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contact .contact_content .left p {
+    text-align: justify;
+}
+
+.contact .contact_content .left .icons {
+    margin: 10px 0;
+}
+
+.contact .contact_content .row {
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+
+.contact .contact_content .row .info {
+    margin-left: 30px;
+}
+
+.contact .contact_content .row i {
+    font-size: 25px;
+    color: crimson;
+}
+
+.contact .contact_content .row .info .head {
+    font-weight: 500;
+}
+
+.contact .contact_content .row .info .sub_title {
+    color: #333;
+}
+
+.contact .right form .fields {
+    display: flex;
+}
+
+.contact .right form .field,
+.contact .right form .fields .field {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.contact .right form .textarea {
+    height: 80px;
+    width: 100%;
+}
+
+.contact .right form .name {
+    margin-right: 10px;
+}
+
+.contact .right form .email {
+    margin-left: 10px;
+}
+
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact .right form .textarea textarea {
+    padding-top: 10px;
+    resize: none;
+}
+
+.contact .right form .button {
+    height: 47px;
+    width: 170px;
+}
+
+.contact .right form .button button {
+    width: 100%;
+    height: 100%;
+    border: 2px solid crimson;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact .right form .button button:hover {
+    color: crimson;
+    background: none;
+}
+
+
+footer {
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+}
+
+footer span a {
+    color: crimson;
+    text-decoration: none;
+}
+
+footer span a:hover {
+    text-decoration: underline;
+}

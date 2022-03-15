@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ::selection {
+            background-color: crimson;
+            color: white;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .post {
+            position: relative;
+            /* border: 2px solid grey; */
+            border-radius: 10px;
+            overflow: hidden;
+            max-width: 400px;
+            margin: 10px 0;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .post:first-child {
+            margin-top: 30px;
+        }
+
+        .profile_pic {
+            padding: 10px;
+        }
+
+        .post img {
+            width: 35px;
+            height: 35px;
+            border: 2px solid grey;
+            border-radius: 50%;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+        }
+
+        .name {
+            display: block;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .comment .name {
+            display: inline-block;
+        }
+
+
+        .time {
+            font-size: 14px;
+            color: grey;
+        }
+
+        .text {
+            display: inline-block;
+            padding: 10px;
+            padding-left: 15px;
+            font-size: 18px;
+            background-color: rgb(236, 232, 232);
+        }
+
+        .actions {
+            width: 95%;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        #liked {
+            display: none;
+        }
+
+        #like,#liked,#comment {
+            width: 49%;
+            text-align: center;
+            padding: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        #like:hover,#liked:hover,#comment:hover {
+            background-color: rgb(215, 219, 207);
+        }
+
+        .comment {
+            position: relative;
+            padding: 15px;
+            padding-top: 0;
+        }
+
+        .comment_list_item {
+            margin: 10px 0;
+        }
+
+        .comment input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid grey;
+            padding: 15px 10px 10px 15px;
+            outline: none;
+            margin: 5px 0;
+        }
+
+        .comment input.active {
+            border-bottom: 2px solid red;
+        }
+
+        .comment::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: black;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .comment_text {
+            display: inline-block;
+            margin-left: 2px;
+            font-size: 14px;
+            color: rgb(99, 94, 94);
+            font-weight: 550;
+            text-align: left;
+        }
+
+        button {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            padding: 4px 6px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        button:hover {
+            background-color: gold;
+            color: black;
+        }
+
+        .show {
+            display: none;
+        }
+
+        
+    </style>
+
+</head>
+<body>
+    <div class="post">
+        <div class="title">
+            <div class="profile_pic">
+                <img src="images/profile.jpg" alt="">
+            </div>
+            <div class="info">
+                <span class="name">Mohammad Tamim Ahmed</span>
+                <span class="time">5m ago</span>
+            </div>
+        </div>
+        <span class="text">Recusandae hic optio minima laudantium deserunt excepturi sequi consequuntur magnam distinctio molestias nobis cupiditate veniam accusamus laborum repellendus, quidem natus! Iusto, laboriosam sint iure aspernatur consectetur quod earum eaque, maiores  pariatur consequuntur tenetur unde. Amet, sunt. Atque labore expedita repellendus ducimus iusto obcaecati eos, in ipsum quas perspiciatis dicta debitis dignissimos suscipit error nobis exercitationem hic? Dolorem, nam. Eveniet eaque dignissimos cum consequuntur dolorum aliquid .</span>
+        <div class="actions">
+            <i id="like" class="far fa-heart"></i>
+            <i id="liked" class="fas fa-heart"> (1)</i>
+            <i id="comment" class="fas fa-comment"> (1)</i>
+        </div>
+        <div id="commentArea" class="comment show">
+            <input id="input" type="text" placeholder="Post a comment"> <button>Send</button>
+            <div class="comment_list_item">
+            <div class="title">
+                <div class="profile_pic">
+                    <img src="images/profile.jpg" alt="">
+                </div>
+                <div class="info">
+                    <div class="info_title">
+                        <span class="name">Mohammad Tamim Ahmed</span>
+                        <span class="time">5m ago</span>
+                    </div>
+                    <span class="comment_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, esse?</span>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const like = document.getElementById("like");
+        const liked = document.getElementById("liked");
+        const comment = document.getElementById("comment");
+        const input = document.getElementById("input");
+        const commentArea = document.getElementById("commentArea");
+
+
+        like.addEventListener("click", function(){
+            like.style = "display: none;";
+            liked.style = "display: block;";
+        });
+
+        liked.addEventListener("click", function(){
+            liked.style = "display: none;";
+            like.style = "display: block;";
+        });
+
+        input.addEventListener("click", function(){
+            input.classList.add("active");
+        });
+
+        comment.addEventListener("click", function(){
+            commentArea.classList.toggle("show");
+        });
+
+
+    </script>
+</body>
+</html>

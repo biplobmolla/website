@@ -1,0 +1,496 @@
+/*================================== 
+            Font Import 
+====================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*================================== 
+            Common CSS 
+====================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.2s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #CCC;
+    overflow-x: hidden;
+}
+
+.btn {
+    font-weight: 500;
+    font-size: 24px;
+    padding: 10px 18px;
+    color: white;
+    background-color: rgba(219, 20, 60, 1);
+    border-radius: 6px;
+    border: 2px solid crimson;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: rgba(219, 20, 60, 0.2);
+    color: crimson;
+}
+
+a {
+    color: crimson;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 24px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.max_width {
+    max-width: 90%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+section {
+    width: 100vw;
+    padding: 40px 0;
+}
+
+.title {
+    text-align: center;
+    padding-top: 100px;
+    position: relative;
+}
+
+.title::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 20px;
+    background: crimson;
+    bottom: 10px;
+    right: calc(50% - 90px);
+    animation: title_round 1.5s ease-in-out infinite;
+}
+
+.title::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 20px;
+    background: crimson;
+    bottom: 10px;
+    left: calc(50% - 90px);
+    animation: title_round 1.5s ease-in-out infinite;
+    animation-direction: reverse;
+}
+
+/*================================== 
+            Navigation 
+====================================*/
+
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 9999;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px 60px;
+}
+
+.nav h1 a {
+    font-size: 30px;
+    font-family: 'Ubuntu', sans-serif;
+    color: crimson;
+}
+
+.nav h1 a:hover {
+    text-decoration: none;
+}
+
+.nav ul {
+    display: flex;
+    position: relative;
+}
+
+.nav ul li {
+    list-style: none;
+    margin-right: 20px;
+}
+
+.nav ul li a {
+    font-size: 18px;
+    display: inline-block;
+    color: black;
+}
+
+.nav ul li a:hover {
+    text-decoration: none;
+    color: crimson;
+    transform: scale(1.1);
+}
+
+.active.active {
+    color: crimson;
+}
+
+.fa-bars {
+    background-color: rgba(0, 0, 0, 1);
+    color: #fff;
+    padding: 8px 10px;
+    border-radius: 4px;
+    right: 25px;
+    top: 25px;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+}
+
+.fa-bars:hover {
+    background-color: crimson;
+    transform: scale(1.1);
+}
+
+
+/*================================== 
+            Navigation End
+====================================*/
+
+
+/*================================== 
+            Hero Start
+====================================*/
+
+.home {
+    height: 100vh;
+    background: url("images/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    min-height: 100vh;
+}
+
+.hero {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+}
+
+.hero_title h2,
+.hero_info p,
+.btn {
+    margin-bottom: 20px;
+}
+
+.hero_title h2 {
+    font-size: 35px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero_title h2 span {
+    color: crimson;
+}
+
+.hero_info p {
+    color: white;
+    font-size: 20px;
+    margin: 40px 0;
+}
+
+.hero .btn {
+    animation: button_scaling 1s ease infinite;
+}
+
+/*================================== 
+            Hero End
+====================================*/
+
+/*================================== 
+            About Start
+====================================*/
+
+.about {
+    height: 100%;
+}
+
+.about .about_content .info {
+    display: flex;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.about .about_content .info .image {
+    width: 40%;
+}
+
+.about .about_content .info .image img {
+    width: 290px;
+    height: 300px;
+    border-radius: 10px;
+    clear: both;
+    display: block;
+    margin: auto;
+}
+
+.about .about_content .info .text {
+    height: 100%;
+    margin: 20px 0 0 auto;
+    width: 60%;
+    clear: both;
+    display: block;
+}
+
+.about .about_content .info .text p {
+    text-align: justify;
+}
+
+.about .about_content .info .text p span {
+    font-weight: bold;
+    color: crimson;
+}
+
+/*================================== 
+            About End
+====================================*/
+
+
+/*================================== 
+            Services Start
+====================================*/
+
+.services {
+    height: 100%;
+}
+
+.services .cards {
+    width: 100%;
+    margin: 140px auto 0 auto;
+    padding: 10px;
+    height: 100%;
+}
+
+.services .cards .card {
+    display: inline-block;
+    width: calc(25% - 10px);
+    margin: 0 auto;
+    text-align: center;
+    background-color: #222;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+}
+
+.services .cards .card:hover {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.services .cards .card:hover .card_element {
+    transform: scale(1.05);
+}
+
+.services .cards .card:hover .text,
+.services .cards .card:hover i {
+    color: #111;
+}
+
+.services .cards .card .subtitle,
+.services .cards .card i,
+.services .cards .card .text {
+    padding: 10px 0;
+}
+
+.services .cards .card i {
+    font-size: 30px;
+    color: white;
+}
+
+.services .cards .card .sub_title {
+    font-size: 25px;
+    font-weight: 500;
+    color: crimson;
+}
+
+.services .cards .card .text {
+    font-size: 18px;
+    color: white;
+    text-align: justify;
+}
+
+
+/*================================== 
+            Services End
+====================================*/
+
+
+
+/*================================== 
+            Services End
+====================================*/
+
+.portfolio {
+    height: 100%;
+}
+
+.portfolio .portfolio_content .row {
+    width: 80%;
+    margin: 80px auto;
+}
+
+.portfolio .portfolio_content .row .col {
+    width: 49%;
+    display: inline-block;
+    margin: 10px auto;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.portfolio .portfolio_content .row .col:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio .portfolio_content .row .col img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border: none;
+    border-radius: 6px;
+}
+
+
+
+/*================================== 
+            Services End
+====================================*/
+
+
+
+/*================================== 
+            Contact Start
+====================================*/
+
+
+.contact_content {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 40px;
+}
+
+.contact .contact_content .feedback input,
+textarea {
+    width: calc(100% + 40px);
+    padding: 12px;
+    border: 1px solid grey;
+    border-radius: 6px;
+    margin: 10px 0;
+    outline: none;
+}
+
+.contact .contact_content .feedback {
+    margin-right: 10%;
+}
+
+textarea {
+    resize: none;
+    height: 180px;
+}
+
+
+/*================================== 
+            Contact Start
+====================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*================================== 
+    Button Animation Start
+====================================*/
+
+@keyframes button_scaling {
+    0% {
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(1.05);
+    }
+
+    60% {
+        transform: scale(1.1);
+    }
+
+    90% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*================================== 
+    Button Animation End
+====================================*/
+
+/*================================== 
+    Title Animation Start
+====================================*/
+
+@keyframes title_round {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(7200deg);
+    }
+}
+
+/*================================== 
+    Title Animation End
+====================================*/

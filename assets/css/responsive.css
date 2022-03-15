@@ -1,0 +1,278 @@
+@media only screen and (max-width: 900px) {
+
+    html {
+        font-size: 10px;
+        overflow-x: hidden;
+    }
+
+    #navlist {
+        position: fixed;
+        left: -100vw;
+        top: 0;
+        bottom: 0;
+        width: 300px;
+        height: 100%;
+        background-color: #777;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        z-index: 998;
+        transition: all 0.5s;
+    }
+
+    #navbar ul li a {
+        font-size: 1.5em;
+        display: inline-block;
+        color: #fff;
+        padding: 0 1em;
+        padding-left: 2em;
+        margin: 1em 0;
+        padding-bottom: 0.6em;
+        transition: all 0.2s ease;
+    }
+
+    #navbar ul li a:hover {
+        color: black;
+    }
+
+    #navbar ul li:first-of-type a {
+        margin-top: 6em;
+        padding-top: 0;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    #close {
+        display: block;
+        position: absolute;
+        top: 2em;
+        right: 2em;
+        cursor: pointer;
+    }
+
+    /* body.active::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 990;
+    } */
+
+    #hero {
+        height: auto;
+    }
+
+    #hero .max-width {
+        height: 100%;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-text {
+        text-align: center;
+        padding: 1em 0;
+    }
+
+
+
+    /* About */
+
+    #about .about-image {
+        padding: 2em;
+    }
+
+    #about .about-image img {
+        width: 20em;
+        height: 20em;
+    }
+
+    #about .about-info {
+        flex-direction: column;
+    }
+
+    #about h1,
+    #services h1,
+    #expertise h1,
+    #portfolio h1,
+    #contact h1 {
+        font-size: 4em;
+    }
+
+    #about .about-info-text {
+        font-size: 2em;
+        padding: 1em;
+    }
+
+    /* Services */
+
+    #services .cards {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    #services .cards .card {
+        width: 100%;
+        margin: 1em;
+    }
+
+    #services .card h2 {
+        font-size: 3rem;
+    }
+
+    #services .card span {
+        font-size: 1.8rem;
+    }
+
+    /* Expertise */
+
+    #expertise .graph .graph-part span {
+        display: inline-block;
+        font-size: 2rem;
+    }
+
+    #expertise .graph .graph-part .graph-line {
+        height: 1rem;
+        width: 60%;
+    }
+
+    #expertise .graph .graph-part .graph-line::after {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    #expertise .graph {
+        padding: 0 0.5rem;
+        width: 100%;
+    }
+
+    /* Portfolio */
+
+    #portfolio .cards {
+        width: 90%;
+    }
+
+    #portfolio .cards .card-row {
+        margin: 0;
+    }
+
+    #portfolio .cards .card-row .card {
+        width: 45%;
+        margin: 20px 10px;
+    }
+
+    #portfolio .cards .card-row .card .portfolio-info h4 {
+        font-size: 2rem;
+    }
+
+    #portfolio .cards .card-row .card .portfolio-info button {
+        font-size: 1.5rem;
+    }
+
+    /* Contact */
+
+    #contact .row .col1 h4,
+    #contact .row .col2 h4,
+    #contact .row .col3 h4 {
+        font-size: 2rem;
+    }
+
+    #contact .row .col2 li,
+    #contact .row .col3 li,
+    #contact .row .col2 li a,
+    #contact .row .col3 li a {
+        font-size: 1.4rem;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    #portfolio .cards .card-row {
+        flex-direction: column;
+    }
+
+    #portfolio .cards .card-row .card {
+        width: 100%;
+    }
+
+    #contact .row {
+        flex-direction: column-reverse;
+    }
+
+    #contact .row .col1,
+    #contact .row .col2,
+    #contact .row .col3 {
+        width: 100%;
+        margin: 1rem;
+    }
+
+    #contact .row .col2 li a,
+    #contact .row .col3 ul li span {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 485px) {
+    #navlist {
+        width: 100vw;
+    }
+
+    #expertise .graph .graph-part span {
+        font-size: 1.5rem;
+    }
+
+    #contact .row .col2 li a,
+    #contact .row .col3 ul li span {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+
+    #expertise .graph .graph-part span {
+        margin: 0 3px;
+    }
+
+    #hero .hero-img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 270px) {
+    #contact .row .col3 li {
+        flex-direction: column;
+        height: 50px;
+    }
+
+    #contact .row .col3 li img {
+        margin-bottom: 5px;
+    }
+
+    #contact .row .col3 li span {
+        font-size: 0.8em;
+    }
+
+}
+
+@media only screen and (max-width: 240px) {
+
+    #contact .row .col2 li a,
+    #contact .row .col3 ul li span {
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 0.5rem;
+    }
+
+    h1 {
+        font-size: 0.5rem;
+    }
+}
