@@ -597,7 +597,7 @@ nav #menu li:nth-child(3) {
 .department-cards {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: 4em 0;
 }
 
