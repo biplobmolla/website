@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+/* Common CSS */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+:root {
+    --primary-color: #706fd3;
+    --secondary-color: #40407a;
+    --general-color: #474787;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.max-width {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.title span {
+    display: inline-block;
+    font-size: 2.5rem !important;
+    color: crimson;
+}
+
+section:not(:first-child) .max-width {
+    padding-bottom: 4rem;
+}
+
+#hamburger {
+    width: 45px;
+    height: 3px;
+    background-color: red;
+    position: absolute;
+    right: 30px;
+    box-shadow: 0 12px 0 #000,
+        0 -12px 0 #000;
+    cursor: pointer;
+    display: none;
+}
+
+/* Hero Section Start */
+
+#hero {
+    background: linear-gradient(45deg, rgba(112, 111, 211, 0.3), rgba(212, 150, 33, 0.4)), url(../images/hero-bg2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+    border: 0;
+    border-radius: 50%;
+}
+
+.logo span {
+    margin-left: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+header nav #close {
+    width: 35px;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    transform: rotateZ(45deg);
+    display: none;
+}
+
+header nav #close::after {
+    content: '';
+    width: 35px;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    transform: rotateZ(90deg);
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.4em 1em;
+    background-color: #ccc;
+    color: #000;
+    border: 0;
+    border-radius: 30px;
+    transition: 0.4s;
+}
+
+header ul li:not(:last-child) a {
+    margin-right: 1em;
+}
+
+header ul li a:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+#hero #hero-text {
+    max-width: 700px;
+    font-size: 2rem;
+    margin: auto;
+    padding: 4em 0;
+    text-align: center;
+}
+
+
+#hero #hero-text h1 {
+    font-size: 4rem;
+    color: #fff;
+    background: linear-gradient(40deg, rgb(37, 233, 2), rgb(243, 114, 114));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animation 2s ease-in infinite;
+}
+
+#hero #hero-text h4 {
+    font-size: 2rem;
+    color: #706fd3;
+}
+
+#hero #hero-text h2 {
+    font-size: 3rem;
+    color: rgb(9, 9, 95);
+    animation: animation 2s ease-in infinite;
+    animation-delay: 1s;
+}
+
+#hero #hero-text p {
+    margin: 1em 0;
+}
+
+#hero #hero-text a {
+    font-size: 0.7em;
+    font-weight: 700;
+    padding: 0.5em 2em;
+    margin: 1.5em 0;
+    display: inline-block;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #ccc;
+    color: #000;
+    transition: 0.5s;
+}
+
+#hero #hero-text a:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+    transform: translateY(-10px);
+}
+
+#hero #hero-text p {
+    color: rgb(228, 223, 223);
+    font-weight: 500;
+    font-size: 0.7em;
+}
+
+@keyframes animation {
+
+    0%,
+    100% {
+        background: linear-gradient(40deg, rgb(208, 167, 255), rgb(103, 255, 97));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    30% {
+        background: linear-gradient(40deg, rgb(106, 213, 255), rgb(255, 145, 145));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    60% {
+        background: linear-gradient(40deg, rgb(255, 96, 189), rgb(173, 185, 255));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+/* Hero Section End */
+
+/* About Us Section Start */
+
+#about {
+    background: linear-gradient(20deg, lightblue, hotpink);
+}
+
+#about span {
+    display: inline-block;
+    font-size: 1.4rem;
+    margin-top: 5px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content-text {
+    margin: 20px 0 0 8%;
+}
+
+.about-content-text a {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.7em 2em;
+    margin: 1.5em 0;
+    display: inline-block;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #ccc;
+    color: #000;
+    transition: 0.5s;
+}
+
+.about-content-text a:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+    transform: translateY(-10px);
+    box-shadow: 2px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+#about img {
+    min-width: 40%;
+    max-width: 100%;
+    border: 0;
+    border-radius: 6px;
+}
+
+/* About Us Section End */
+
+/* List-of-clients Section Start */
+
+#list-of-clients {
+    background-color: #eee;
+}
+
+#list-of-clients .max-width .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#list-of-clients .max-width .content table {
+    text-align: center;
+    border-collapse: collapse;
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
+}
+
+#list-of-clients .max-width .content table th,
+#list-of-clients .max-width .content table td {
+    border: 1px solid black;
+    font-size: 1.3rem;
+    padding: 0.2em;
+}
+
+#list-of-clients .max-width .content table tbody:first-child {
+    background-color: #40407a;
+    color: #fff;
+}
+
+#list-of-clients .max-width .content table tbody:nth-child(odd):not(:first-child) {
+    background-color: #ccc;
+}
+
+#list-of-clients .max-width .content table tbody:nth-child(even):not(:first-child) {
+    background-color: #fff;
+}
+
+/* List-of-clients Section End */
+
+/* Services Section End */
+
+#services h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+#services h4 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #474787;
+}
+
+#services ul {
+    margin: 10px 0;
+}
+
+#services ul li {
+    margin-left: 30px;
+    font-weight: 700;
+    color: gray;
+}
+
+.electrical,
+.first {
+    display: flex;
+}
+
+.first-left,
+.last-left {
+    flex-basis: 40%;
+}
+
+.first-right {
+    flex-basis: 40%;
+    margin-left: auto;
+}
+
+.last-right {
+    flex-basis: 40%;
+    margin-left: auto !important;
+}
+
+/* Services Section End */
+
+/* Contact Us Section Start */
+
+#contact {
+    background: linear-gradient(45deg, #000, #444);
+}
+
+#contact {
+    color: #fff;
+}
+
+
+#contact address {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ccc;
+}
+
+#contact .contact-info .number {
+    text-align: center;
+    margin: 5px 0;
+}
+
+#contact .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+}
+
+#contact .contact-info .email {
+    margin-left: 10px;
+    text-align: center;
+}
+
+.developer-info {
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.developer-info a {
+    color: crimson;
+}
+
+.developer-info a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Us Section End */
+
+/* About Us Section Start */
+
+#about-hero {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(../images/IMG-20220223-WA0000.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+#about-hero h1 span {
+    display: inline-block;
+    font-size: 4rem !important;
+}
+
+#about-hero h1 {
+    font-size: 4rem;
+}
+
+#about-text h2 {
+    margin: 15px 0;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+#about-text .content-text {
+    font-size: 1.2rem;
+    display: inline-block;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+#about-text .content-text span {
+    font-weight: 700;
+    color: #0f0;
+}
+
+#about-text a {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color: #0f0;
+    padding: 0.5em 1.5em;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+#about-text a:hover {
+    box-shadow: 15px 15px 40px rgba(77, 72, 72, 0.2);
+    transform: translateY(-5px);
+}
+
+/* All Photos Section */
+
+#all-photos .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+    grid-template-rows: repeat(3, 260px);
+}
+
+#all-photos .col img {
+    width: 100%;
+    height: 100%;
+}
+
+/* About Us Section End */

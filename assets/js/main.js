@@ -45,8 +45,8 @@ let cardTitle = document.getElementsByClassName('card-title');
 let cardImage = document.getElementsByClassName('card-image');
 let cardBtn = document.getElementsByClassName('card-button');
 let cardBtnIndex = document.getElementsByClassName('card-button');
-let image = ['personal.jpg', 'school.jpg', 'the-celebrity.jpg', 'trust-family.jpg', 'post-type.jpg', 'hospital.jpg'];
-let title = ['Personal', 'School', 'The celebrity', 'Trust family', 'Social post type', 'Hospital'];
+let image = ['personal.jpg', 'school.jpg', 'the-celebrity.jpg', 'trust-family.jpg', 'post-type.jpg', 'hospital.jpg', 'leon-engineering-works.jpg', '3dwebsite.jpg'];
+let title = ['Personal', 'School', 'The celebrity', 'Trust family', 'Social post type', 'Hospital', 'Business', '3D Website'];
 
 
 for (i = 0; i < cardImage.length; i++) {
